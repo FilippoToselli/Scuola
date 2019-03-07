@@ -1,18 +1,20 @@
 from turtle import *
+import random as r
 
-a = 0
-b = 1
-color("red", "blue")
+print("Inserire il numero di spostamenti")
+scelta = input()
 
-print("Inserire il numero di braccia: ")
-braccia = int(input())
+k = 0
+spostamento = 20
 
-while True:
-    forward(b)
-    a, b = b, a + b
-    left(90)
-    braccia = braccia - 1
-    if(braccia == 0):
-        break
+speed(0)
+
+for k in range(int(scelta)):
+    if(r.random()>0.5):
+        left(90)
+        color("red", "red")
+    else:
+        right(90)
+        color("blue", "blue")
+    forward(spostamento)
 done()
-
